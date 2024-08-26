@@ -1,0 +1,6 @@
+[submodule "tarkov-planner-backend"]
+	path = tarkov-planner-backend
+	url = https://github.com/PyThov/tarkov-planner-backend
+[submodule "tarkov-planner-ui"]
+	path = tarkov-planner-ui
+	url = https://github.com/PyThov/tarkov-planner-ui
