@@ -1,0 +1,25 @@
+services:
+  frontend:
+    build:
+      context: ./tarkov-planner-ui
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - VITE_API_URL=http://localhost:8000 # TODO: This should work with http://backend:8000 but doesn't :/
+    networks:
+      - network
+
+  backend:
+    build:
+      context: ./tarkov-planner-backend
+    ports:
+      - "8000:8000"
+    networks:
+      - network
+
+networks:
+  network:
+    name: tarkov-planner_network
+    driver: bridge
