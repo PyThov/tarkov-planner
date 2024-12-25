@@ -16,6 +16,8 @@ services:
       context: ./tarkov-planner-backend
     ports:
       - "8000:8000"
+    environment:
+      - RATE_LIMIT=20
     networks:
       - network
 
